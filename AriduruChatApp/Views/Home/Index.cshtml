@@ -1,0 +1,31 @@
+﻿@using AriduruChatApp.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="sidenav col-md-6" id="promotion">
+        <h1>Welcome To Arıduru Chat App</h1>
+        <p>We want people to communicate securely</p>
+    </div>
+    <div class="col-md-6 " id="loginForm">
+        @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.LabelFor(x => x.UserName)
+            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", placeHolder = "Username", id = "loginInput" })
+            @Html.ValidationMessageFor(x => x.UserName)
+
+            @Html.LabelFor(x => x.Password)
+            @Html.TextBoxFor(x => x.Password, new { @class = "form-control", type = "password", placeHolder = "Password", id = "loginInput" })
+            @Html.ValidationMessageFor(x => x.Password)
+            <br />
+
+            <input type="submit" class="btn btn-primary btn-lg" value="Login" />
+            <a href="@Url.Action("Register","Login")" class="btn btn-secondary btn-lg">Register</a>
+        }
+    </div>
+</div>
+

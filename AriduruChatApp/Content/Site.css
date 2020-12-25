@@ -1,0 +1,91 @@
+﻿* {
+    box-sizing : border-box;
+}
+
+body {
+    background: linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);
+   
+    padding: 0;
+    margin: 0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#promotion {
+    height: 100%;
+    background-color: cadetblue;
+    padding-top: 20px;
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 300px;
+}
+#loginForm {
+    height: 100%;
+    margin: 0 auto;
+    background-color: coral;
+    padding-top: 20px;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    padding-top: 300px;
+}
+
+#loginInput {
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#registrationItem {
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.registration {
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    position: center;
+    overflow-x: hidden;
+    padding-top: 50px;
+    z-index: 1;
+    border-radius: 60px;
+}
+
+@keyframes anim1 {
+    from {
+        font-size: 0px;
+    }
+
+    to {
+        font-size: 1rem;
+    }
+}
+
+li {
+    color: black;
+    transition: 30px;
+    animation: anim1 .5s;
+    background-color : black;
+    padding : 0 0 ;
+}

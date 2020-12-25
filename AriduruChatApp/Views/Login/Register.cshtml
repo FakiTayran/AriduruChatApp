@@ -1,0 +1,26 @@
+﻿@using AriduruChatApp.Models
+@model User
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2 style="text-align : center; color : white">Welcome To Arıduru Chat Registration </h2>
+<div class="registration">
+
+    @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.LabelFor(x => x.UserName, new { id = "registrationItem" })
+        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", placeHolder = "Username", id = "loginInput" })
+        @Html.ValidationMessageFor(x => x.UserName)
+
+        @Html.LabelFor(x => x.Password, new { id = "registrationItem" })
+        @Html.TextBoxFor(x => x.Password, new { @class = "form-control", type = "password", placeHolder = "Password", id = "loginInput" })
+        @Html.ValidationMessageFor(x => x.Password)
+        <br />
+
+        <input type="submit" class="btn btn-secondary" value="Register" id="registrationItem">
+    }
+</div>
+
